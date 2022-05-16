@@ -1,0 +1,23 @@
+.App {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+}
+button{
+  height: 30px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.Ser{
+  display: flex;
+  height: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 30px;
+ 
+}
+
