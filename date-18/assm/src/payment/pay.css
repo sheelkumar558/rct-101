@@ -1,0 +1,9 @@
+.pay{
+    border: 1px solid red;
+    background-color: rgb(248, 64, 64);
+    margin: auto;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
