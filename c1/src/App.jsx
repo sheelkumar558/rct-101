@@ -1,9 +1,12 @@
 import React from "react";
 import TaskApp from "./components/TaskApp";
+import "./App.css"
 
 function App() {
-  return <div>{/* Code Here */}
-  <TaskApp/>
+  return <div className="app">{/* Code Here */}
+  
+  < TaskApp/>
+  
   </div>;
 }
 

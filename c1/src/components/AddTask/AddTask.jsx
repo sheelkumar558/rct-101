@@ -1,44 +1,25 @@
 import React from "react";
 import styles from "./addTask.module.css";
-
-import { useState } from 'react'
-import Tasks from "../Tasks/Tasks";
-import { TaskHeader } from "../TaskHeader";
+import { useState } from "react";
 
 
 const AddTask = () => {
   // NOTE: do not delete `data-cy` key value pair
-
-  const [task,setTask]=useState("");
-  const[array,setArray]=useState([]);
-  const[head,setHead]=useState(0)
-  const invalue =(e)=>{
-      console.log("skk",e.target.value);
-      setTask(e.target.value);
-      
-  }
-  const store =()=>{
-  //  setArray([...array,task])
-setArray([task,...array])
-
-   console.log(array);
-   
-   setHead(head+1);
+  const [input, setInput] = useState("")
+  const [value, setValue] = useState("")
   
-  }
+const handleClick=()=>{
+  setValue(input)
+  console.log(input)
+}
 
   return (
-   <>
-   <TaskHeader v={head}/>
-    
-     <div className={styles.todoForm}>
-      <input data-cy="add-task-input" type="text" onChange={invalue} />
-      <button data-cy="add-task-button" onClick={store}>+</button>
-      </div>
-  
-    <Tasks pass={array}/>
-    
-   </>
+    <div className={styles.todoForm}>
+      <input data-cy="add-task-input" type="text"  onChange={(event)=> setInput(event.target.value)}/>
+
+      <button data-cy="add-task-button" onClick={handleClick}>+</button>
+      <h1>{value}</h1>
+    </div>
   );
 };
 

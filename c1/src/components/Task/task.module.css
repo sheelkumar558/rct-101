@@ -1,6 +1,14 @@
 .task {
   /* Sample  */
-  background-color: 5px solid black;
-  padding-left: 150px;
-
+  padding: 20px;
 }
+
+p{
+  display: flex;
+  flex-direction: row;
+  /* padding: 10px; */
+}
+span{
+  margin-left: 20px;
+  margin-right: 20px;
+} 

@@ -1,4 +1,13 @@
 .taskHeader {
-text-align: center;
-background-color: tomato;
+  /* Sample */
+  background-color: aquamarine;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 10px; */
+padding: 30px;
+  
 }
