@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Todoapp from './ass2/todoapp';
 import SquareComponent from "./modules/SquareComponent";
 
 const clearState = ["", "", "", "", "", "", "", "", "", ""];
@@ -68,6 +69,9 @@ function App() {
             </div>
             <button className="clear-button" onClick={clearGame}>Clear Game</button>
             <p className="fc-aqua fw-600">The Indian Dev</p>
+            <div>
+                <Todoapp />
+            </div>
         </div>
     );
 }
