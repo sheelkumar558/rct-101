@@ -14,11 +14,15 @@ const Products = () => {
 
   return (
     <div>
+      Products : {" "}
+      <div>
       {products.map((e) => (
         <div key={e.id}>
-          <Link to={`/products/${e.name}`}>{e.name}</Link>
+          <Link to={`/products/${e.id}`}>{e.name}</Link>
         </div>
       ))}
+      </div>
+    
     </div>
   );
 };

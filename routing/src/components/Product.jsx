@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
-  return (
-    <div>Product</div>
-  )
-}
+  const [product, setProduct] = useState({});
+  const { id } = useParams();
+  useEffect(() => {
+    if (id) {
+      fetch(`http://localhost:8080/products/${id}`)
+        .then((r) => r.json())
+        .then((d) => setProduct(d));
+    }
+  }, [id]);
+  return <div>
+    Product ID : {id}
+     <div>Product-name : {product.name}</div>
+     <div>Price : {product.price}</div>
+    </div>;
+};
 
-export default Product
+export default Product;
