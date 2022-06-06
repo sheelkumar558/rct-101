@@ -13,7 +13,8 @@ const Navbar = () => {
     navigate('/login');
    }
    
-  }
+  };
+  
   return (
     <div style={{padding:"10px" , display: "flex", gap:"20px"}}>Navbar :
       <Link to="" >Home</Link>
