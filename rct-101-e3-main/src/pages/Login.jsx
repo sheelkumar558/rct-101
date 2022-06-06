@@ -1,54 +1,23 @@
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import Navbar from "../components/Navbar/Navbar";
 import { AuthContext } from "../context/AuthContext";
 
-
 const Login = () => {
-  const navigate = useNavigate();
-  const [loginCreds, setLoginCreds] = useState({});
-  const {login} = useContext(AuthContext);
-  const handleChenge = (e) => {
-    const { name, value } = e.target;
-    setLoginCreds({
-      ...loginCreds,
-      [name]: value,
-    });
-  };
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    login();
-    navigate("/feeds");
-  }
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  // const [state, dispatch] = useContext(AppContext);
+
   return (
-    <div>
-      Login
-      <form 
-       onSubmit={handleSubmit}
-       style={{
-         display: "flex",
-         flexDirection: "column",
-         margin: "auto",
-         maxWidth: "200px",
-         gap: "10px",
-       }}
-      >
-      <input 
-      data-cy="login-email" 
-      name="email"
-      type="text"
-      placeholder="email"
-      onChange={handleChenge}
-      />
-      <input
-       data-cy="login-password" 
-       name="password"
-       type="password"
-       placeholder="Enter password..."
-       onChange={handleChenge}
-       />
-      <button data-cy="login-submit">Login</button>
-      </form>
+    <>
+    <Navbar/>
+    <div >
+      <p>Login</p>
+      <input type="email" data-cy="login-email"  /><br />
+      <input type="password" data-cy="login-password" /> <br />
+      <button style={{width:"170px"}} type="submit" data-cy="login-submit">Login</button>
     </div>
+    </>
   );
 };
 
