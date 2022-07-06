@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Pin
-        length={4}
+        length={5}
         setOtpHandler={(value) => {
           setOtp(value);
         }}
